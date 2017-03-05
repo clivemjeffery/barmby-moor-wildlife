@@ -1,0 +1,9 @@
+---
+title : "All Birds"
+---
+
+# All the bird pages
+
+<% current_page.children.each do |child| %>
+[<%= child.data.title %>](<%= child.url %>)
+<% end %>

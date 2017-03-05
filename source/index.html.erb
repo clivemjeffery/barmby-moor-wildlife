@@ -1,0 +1,17 @@
+---
+title: A Middleman Testbed
+---
+
+<h2>Files</h2>
+
+<div>
+  <% sitemap.resources.each do |res| %>
+    <div>
+      <span><%= res.path %> <%= link_to res.data.title, res.path %> (</span>
+      <% res.children.each do |child| %>
+        <span><%= link_to child.data.title, child.path %></span>
+      <% end %>
+      )
+    </div>
+  <% end %>
+</div>
